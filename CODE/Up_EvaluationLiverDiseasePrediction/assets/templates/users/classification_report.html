@@ -1,0 +1,99 @@
+{% extends 'users/userbase.html'%}
+{%block contents%}
+
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+
+<section id="intro">
+
+<div class="intro-text">
+
+<br><br><br>
+
+<h3 align="center" style="color:green;font-weight:bold;">
+Liver Disease Classification Report
+</h3>
+
+<br>
+
+<center>
+
+<table class="table">
+
+<tr>
+<th>S.NO</th>
+<th>Algorithm</th>
+<th>Accuracy</th>
+<th>Precision</th>
+<th>Sensitivity</th>
+<th>Specificity</th>
+</tr>
+
+<tr>
+<td>1</td>
+<td>Logistic Regression</td>
+<td>{{ lg.accuracy }} %</td>
+<td>{{ lg.precision }}</td>
+<td>{{ lg.sensitivity }}</td>
+<td>{{ lg.specificity }}</td>
+</tr>
+
+<tr>
+<td>2</td>
+<td>SVM</td>
+<td>{{ svm.accuracy }} %</td>
+<td>{{ svm.precision }}</td>
+<td>{{ svm.sensitivity }}</td>
+<td>{{ svm.specificity }}</td>
+</tr>
+
+<tr>
+<td>3</td>
+<td>Decision Tree</td>
+<td>{{ dt.accuracy }} %</td>
+<td>{{ dt.precision }}</td>
+<td>{{ dt.sensitivity }}</td>
+<td>{{ dt.specificity }}</td>
+</tr>
+
+<tr>
+<td>4</td>
+<td>Random Forest</td>
+<td>{{ rf.accuracy }} %</td>
+<td>{{ rf.precision }}</td>
+<td>{{ rf.sensitivity }}</td>
+<td>{{ rf.specificity }}</td>
+</tr>
+
+<tr>
+<td>5</td>
+<td>KNN</td>
+<td>{{ knn.accuracy }} %</td>
+<td>{{ knn.precision }}</td>
+<td>{{ knn.sensitivity }}</td>
+<td>{{ knn.specificity }}</td>
+</tr>
+
+</table>
+
+</center>
+
+</div>
+</section>
+
+{%endblock%}

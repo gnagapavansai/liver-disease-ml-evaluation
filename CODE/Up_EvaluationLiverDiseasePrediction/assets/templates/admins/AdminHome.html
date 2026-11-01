@@ -1,0 +1,46 @@
+{% extends 'admins/adminbase.html'%}
+{% block contents %}
+
+<section id="intro">
+
+<div class="intro-text">
+
+<br><br><br>
+
+<h3 align="center" style="color:teal;">Welcome to Admin Dashboard</h3>
+
+<br><br>
+
+<div style="display:flex; justify-content:center; gap:40px; flex-wrap:wrap;">
+
+<a href="/RegisterUsersView/" style="text-decoration:none;">
+<div style="width:220px; height:120px; background:#4CAF50; color:white; text-align:center; padding-top:40px; border-radius:10px;">
+<h4>Registered Users</h4>
+</div>
+</a>
+
+<a href="/admin_view_predictions/" style="text-decoration:none;">
+<div style="width:220px; height:120px; background:#2196F3; color:white; text-align:center; padding-top:40px; border-radius:10px;">
+<h4>Prediction Records</h4>
+</div>
+</a>
+
+<a href="/admin_view_results/" style="text-decoration:none;">
+<div style="width:220px; height:120px; background:#FF9800; color:white; text-align:center; padding-top:40px; border-radius:10px;">
+<h4>ML Results</h4>
+</div>
+</a>
+
+<a href="/admin/" style="text-decoration:none;">
+<div style="width:220px; height:120px; background:#9C27B0; color:white; text-align:center; padding-top:40px; border-radius:10px;">
+<h4>Django Admin</h4>
+</div>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}
